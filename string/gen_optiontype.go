@@ -86,6 +86,24 @@ func (receiver NullableType) MarshalJSON() ([]byte, error) {
 	return json.Marshal(receiver.value)
 }
 
+func (receiver NullableType) WhenNone(fn func()) {
+	if NoneNullable() == receiver {
+		fn()
+	}
+}
+
+func (receiver NullableType) WhenNull(fn func()) {
+	if Null() == receiver {
+		fn()
+	}
+}
+
+func (receiver NullableType) WhenSome(fn func(string)) {
+	if NoneNullable() != receiver && Null() != receiver {
+		fn(receiver.value)
+	}
+}
+
 func (receiver *NullableType) UnmarshalJSON(b []byte) error {
 	if nil == receiver {
 		return errNilReceiver
@@ -196,6 +214,18 @@ func (receiver *Type) UnmarshalJSON(b []byte) error {
 	*receiver = Some(target)
 
 	return nil
+}
+
+func (receiver Type) WhenNone(fn func()) {
+	if None() == receiver {
+		fn()
+	}
+}
+
+func (receiver Type) WhenSome(fn func(string)) {
+	if None() != receiver {
+		fn(receiver.value)
+	}
 }
 
 func (receiver Type) Value() (driver.Value, error) {
