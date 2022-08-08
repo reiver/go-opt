@@ -1,11 +1,8 @@
 # go-opt
 
-Package **opt** provides alternatives to Go's built-in types (bool, float64, int64, string, time.Time)
-that also let you express a "lack of a value"; for the Go programming language;
-these are similar to "option types" or "maybe types" in some other programming languages.
+Package **opt** implements an **optional-type**, for the Go programming language.
 
-(Code for this was generated using https://github.com/reiver/gogen-optiontype )
-
+In other programming languages, an **optional-type** might be know as: a **option type**, or a **maybe type**.
 
 ## Documention
 
