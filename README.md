@@ -24,6 +24,10 @@ if opt.Nothing[string]() == op {
 
 // ...
 
+op = opt.Something("Hello world! 👾")
+
+// ...
+
 switch op {
 case op.Nothing[string]():
 	//@TODO
