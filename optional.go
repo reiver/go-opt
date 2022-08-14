@@ -80,7 +80,45 @@ func Something[T any](value T) Optional[T] {
 	}
 }
 
-// Get return the value inside of the optional-type if it is holding something.
+// Filter returns itself if it is holding something and ‘fn’ applied to its value returns true.
+// Else it return nothing.
+//
+// For example:
+//
+//	fn := func(value int) bool {
+//		return 0 == (value % 2)
+//	}
+//	
+//	// ...
+//	
+//	var op1 opt.Optional[int] = opt.Something[int](10)
+//	
+//	op1 = op1.Filter(fn)
+//	
+//	// ...
+//	
+//	var op2 opt.Optional[int] = opt.Something[int](11)
+//	
+//	op2 = op2.Filter(fn)
+//	
+//	// ...
+//	
+//	var op3 opt.Optional[int] = opt.Nothing[int]()
+//	
+//	op3 = op3.Filter(fn)
+func (receiver Optional[T]) Filter(fn func(T)bool) Optional[T] {
+	if !receiver.something {
+		return Nothing[T]()
+	}
+
+	if !fn(receiver.value) {
+		return Nothing[T]()
+	}
+
+	return receiver
+}
+
+// Get returns the value inside of the optional-type if it is holding something.
 //
 // Example usage:
 //
