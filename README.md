@@ -44,7 +44,7 @@ default:
 // ...
 
 value, found := op.Get()
-if {
+if found {
 	fmt.Println("VALUE:", value)
 } else {
 	fmt.Println("nothing")
