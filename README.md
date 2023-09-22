@@ -2,18 +2,22 @@
 
 Package **opt** implements an **optional-type**, for the Go programming language.
 
-In other programming languages, an **optional-type** might be know as: a **option type**, or a **maybe type**.
+In other programming languages, an **optional-type** might be know as: a **option-type**, or a **maybe-type**.
 
 ## Documention
 
-Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-opt
+Online documentation, which includes examples, can be found at: http://godoc.org/sourcecode.social/reiver/go-opt
 
-[![GoDoc](https://godoc.org/github.com/reiver/go-opt?status.svg)](https://godoc.org/github.com/reiver/go-opt)
+[![GoDoc](https://godoc.org/sourcecode.social/reiver/go-opt?status.svg)](https://godoc.org/sourcecode.social/reiver/go-opt)
 
 ## Examples
 
 Here is an example **optional-type** that can hold a string:
 ```go
+import "sourcecode.social/reiver/go-opt"
+
+//
+
 var op opt.Optional[string] // the default value is nothing.
 
 // ...

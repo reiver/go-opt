@@ -1,3 +1,3 @@
-module github.com/reiver/go-opt
+module sourcecode.social/reiver/go-opt
 
 go 1.18
