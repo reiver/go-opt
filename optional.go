@@ -2,7 +2,6 @@ package opt
 
 import (
 	"fmt"
-	"encoding/json"
 )
 
 // Optional represents an optional value.
@@ -168,15 +167,6 @@ func (receiver Optional[T]) GoString() string {
 	}
 
 	return fmt.Sprintf("opt.Something[%T](%#v)", receiver.value, receiver.value)
-}
-
-// MarshalJSON makes it so json.Marshaler is implemented.
-func (receiver Optional[string]) MarshalJSON() ([]byte, error) {
-	if !receiver.something {
-		return nil, fmt.Errorf("cannot marshal opt.Nothing[%T]()", receiver.value)
-	}
-
-	return json.Marshal(receiver.value)
 }
 
 // WhenNothing will call ‘fn’ when ‘receiver’ is holding nothing.
