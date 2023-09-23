@@ -44,3 +44,22 @@ func TestOptional_MarshalJSON_bool(t *testing.T) {
 		}
 	}
 }
+
+func TestOptional_MarshalJSON_bool_fail(t *testing.T) {
+
+	var nothing opt.Optional[bool]
+
+	actualBytes, err := nothing.MarshalJSON()
+	if nil == err {
+		t.Error("Expected an error but did not actually get one.")
+		t.Logf("ACTUAL: %q", actualBytes)
+		t.Logf("ERROR: (%T) %s", err, err)
+		return
+	}
+	if nil != actualBytes {
+		t.Error("Expected not bytes but actually get some.")
+		t.Logf("ACTUAL: %q", actualBytes)
+		t.Logf("ERROR: (%T) %s", err, err)
+		return
+	}
+}
