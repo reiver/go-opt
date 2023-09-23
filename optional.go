@@ -107,7 +107,7 @@ func Something[T any](value T) Optional[T] {
 //	
 //	op3 = op3.Filter(fn)
 func (receiver Optional[T]) Filter(fn func(T)bool) Optional[T] {
-	if !receiver.something {
+	if receiver.isnothing() {
 		return Nothing[T]()
 	}
 
@@ -116,6 +116,10 @@ func (receiver Optional[T]) Filter(fn func(T)bool) Optional[T] {
 	}
 
 	return receiver
+}
+
+func (receiver Optional[T]) isnothing() bool {
+	return !receiver.something
 }
 
 // Get returns the value inside of the optional-type if it is holding something.
@@ -162,7 +166,7 @@ func (receiver Optional[T]) Get() (T, bool) {
 //	// Output:
 //	// op = opt.Nothing[uint8]()
 func (receiver Optional[T]) GoString() string {
-	if !receiver.something {
+	if receiver.isnothing() {
 		return fmt.Sprintf("opt.Nothing[%T]()", receiver.value)
 	}
 
@@ -183,7 +187,7 @@ func (receiver Optional[T]) GoString() string {
 //		//@TODO
 //	})
 func (receiver Optional[T]) WhenNothing(fn func()) {
-	if !receiver.something {
+	if receiver.isnothing() {
 		fn()
 	}
 }
