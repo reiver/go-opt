@@ -1,8 +1,9 @@
 package opt
 
 import (
-	"fmt"
 	"encoding/json"
+
+	"sourcecode.social/reiver/go-erorr"
 )
 
 var _ json.Unmarshaler = new(Optional[bool])
@@ -14,7 +15,7 @@ func (receiver *Optional[T]) UnmarshalJSON(data []byte) error {
 	case *bool, *string, json.Unmarshaler:
 		// these are OK.
 	default:
-		return fmt.Errorf("cannot unmarshal into something of type %T from JSON because pointer to parameterized type is ‘%T’ rather than ‘*bool’, ‘*string’, or ‘json.Unmarshaler’", receiver, &receiver.value)
+		return erorr.Errorf("opt: cannot unmarshal into something of type %T from JSON because pointer to parameterized type is ‘%T’ rather than ‘*bool’, ‘*string’, or ‘json.Unmarshaler’", receiver, &receiver.value)
 	}
 
 	{

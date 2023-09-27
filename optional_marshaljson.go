@@ -1,8 +1,9 @@
 package opt
 
 import (
-	"fmt"
 	"encoding/json"
+
+	"sourcecode.social/reiver/go-erorr"
 )
 
 var _ json.Marshaler = Nothing[bool]()
@@ -14,11 +15,11 @@ func (receiver Optional[T]) MarshalJSON() ([]byte, error) {
 	case bool, string, json.Marshaler:
 		// these are OK.
 	default:
-		return nil, fmt.Errorf("cannot marshal something of type %T into JSON because parameterized type is ‘%T’ rather than ‘bool’ or ‘string’", receiver, receiver.value)
+		return nil, erorr.Errorf("opt: cannot marshal something of type %T into JSON because parameterized type is ‘%T’ rather than ‘bool’, ‘string’, or ‘json.Marshaler’", receiver, receiver.value)
 	}
 
 	if receiver.isnothing() {
-		return nil, fmt.Errorf("cannot marshal opt.Nothing[%T]() into JSON", receiver.value)
+		return nil, erorr.Errorf("opt: cannot marshal opt.Nothing[%T]() into JSON", receiver.value)
 	}
 
 	return json.Marshal(receiver.value)
