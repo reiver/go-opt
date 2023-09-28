@@ -54,3 +54,21 @@ if found {
 	fmt.Println("nothing")
 }
 ```
+
+## Import
+
+To import package **opt** use `import` code like the follownig:
+```
+import "sourcecode.social/reiver/go-opt"
+```
+
+## Installation
+
+To install package **opt** do the following:
+```
+GOPROXY=direct https://sourcecode.social/reiver/go-opt
+```
+
+## Author
+
+Package **opt** was written by [Charles Iliya Krempeaux](http://changelog.ca)
