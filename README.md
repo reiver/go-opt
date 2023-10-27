@@ -66,7 +66,7 @@ import "sourcecode.social/reiver/go-opt"
 
 To install package **opt** do the following:
 ```
-GOPROXY=direct https://sourcecode.social/reiver/go-opt
+GOPROXY=direct go get https://sourcecode.social/reiver/go-opt
 ```
 
 ## Author
