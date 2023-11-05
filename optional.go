@@ -141,6 +141,29 @@ func (receiver Optional[T]) Get() (T, bool) {
 	return receiver.value, receiver.something
 }
 
+// GetElse returns the value inside of the optional-type if it is holding something.
+// Else it returns the alternstive value passed as a parameter.
+// Example usage:
+//
+//	var op opt.Optional[string]
+//	
+//	// ...
+//	
+//	value := op.GetElse(alternative)
+//	
+//	if found {
+//		fmt.Println("VALUE:", value)
+//	} else {
+//		fmt.Println("nothing")
+//	}
+func (receiver Optional[T]) GetElse(alternative T) T {
+	if receiver.isnothing() {
+		return alternative
+	}
+
+	return receiver.value
+}
+
 // GoString makes it that when the fmt.Fprintf(), fmt.Printf(), and fmt.Sprintf() family of functions
 // renders this type with the %#v verb, that it will be easier to understand.
 //
