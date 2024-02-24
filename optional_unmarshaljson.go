@@ -18,7 +18,7 @@ func (receiver *Optional[T]) UnmarshalJSON(data []byte) error {
 	}
 
 	switch interface{}(&receiver.value).(type) {
-	case *bool, *string, json.Unmarshaler:
+	case *bool, *int64, *uint64, *string, *json.Number, json.Unmarshaler:
 		// these are OK.
 	default:
 		return erorr.Errorf("opt: cannot unmarshal into something of type %T from JSON because pointer to parameterized type is ‘%T’ rather than ‘*bool’, ‘*string’, or ‘json.Unmarshaler’", receiver, &receiver.value)
