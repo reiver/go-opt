@@ -18,7 +18,7 @@ func (receiver Optional[T]) MarshalJSON() ([]byte, error) {
 		return nil, erorr.Errorf("opt: cannot marshal something of type %T into JSON because parameterized type is ‘%T’ rather than ‘bool’, ‘string’, or ‘json.Marshaler’", receiver, receiver.value)
 	}
 
-	if receiver.isnothing() {
+	if receiver.IsNothing() {
 		return nil, erorr.Errorf("opt: cannot marshal opt.Nothing[%T]() into JSON", receiver.value)
 	}
 

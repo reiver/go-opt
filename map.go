@@ -39,7 +39,7 @@ package opt
 //	
 //	// result2 == opt.Nothing[int]()
 func Map[T1 any, T2 any](op Optional[T1], fn func(T1)T2) Optional[T2] {
-	if op.isnothing() {
+	if op.IsNothing() {
 		return Nothing[T2]()
 	}
 
