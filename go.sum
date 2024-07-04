@@ -1,2 +1,2 @@
-sourcecode.social/reiver/go-erorr v0.0.0-20230922202459-231149d185a1 h1:wpnz4JicQBLWrgGphYBls7DysIFCcnWgDz/vce/sY8E=
-sourcecode.social/reiver/go-erorr v0.0.0-20230922202459-231149d185a1/go.mod h1:NFtd7fzEf0r6A6R7JXYZfayRhPaJy0zt/18VWoLzrxA=
+github.com/reiver/go-erorr v0.0.0-20240704145350-0485e21eaa82 h1:xxt7qL+7ZfRysXWXU2MpULOg/zWe5P+Fmw9VyUFCmZE=
+github.com/reiver/go-erorr v0.0.0-20240704145350-0485e21eaa82/go.mod h1:F0HbBf+Ak2ZlE8YkDW4Y+KxaUmT0KaaIJK6CXY3cJxE=

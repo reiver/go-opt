@@ -3,7 +3,7 @@ package opt
 import (
 	"encoding/json"
 
-	"sourcecode.social/reiver/go-erorr"
+	"github.com/reiver/go-erorr"
 )
 
 var _ json.Marshaler = Nothing[bool]()

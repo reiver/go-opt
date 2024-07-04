@@ -6,15 +6,15 @@ In other programming languages, an **optional-type** might be know as: a **optio
 
 ## Documention
 
-Online documentation, which includes examples, can be found at: http://godoc.org/sourcecode.social/reiver/go-opt
+Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-opt
 
-[![GoDoc](https://godoc.org/sourcecode.social/reiver/go-opt?status.svg)](https://godoc.org/sourcecode.social/reiver/go-opt)
+[![GoDoc](https://godoc.org/github.com/reiver/go-opt?status.svg)](https://godoc.org/github.com/reiver/go-opt)
 
 ## Examples
 
 Here is an example **optional-type** that can hold a string:
 ```go
-import "sourcecode.social/reiver/go-opt"
+import "github.com/reiver/go-opt"
 
 //
 
@@ -59,14 +59,14 @@ if found {
 
 To import package **opt** use `import` code like the follownig:
 ```
-import "sourcecode.social/reiver/go-opt"
+import "github.com/reiver/go-opt"
 ```
 
 ## Installation
 
 To install package **opt** do the following:
 ```
-GOPROXY=direct go get https://sourcecode.social/reiver/go-opt
+GOPROXY=direct go get https://github.com/reiver/go-opt
 ```
 
 ## Author

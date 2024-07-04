@@ -1,7 +1,7 @@
 package opt_test
 
 import (
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 
 	"fmt"
 

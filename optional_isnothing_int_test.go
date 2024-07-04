@@ -3,7 +3,7 @@ package opt_test
 import (
 	"testing"
 
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 )
 
 func TestOptional_IsNothing_int(t *testing.T) {
