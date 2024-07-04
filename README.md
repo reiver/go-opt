@@ -71,4 +71,4 @@ GOPROXY=direct go get https://sourcecode.social/reiver/go-opt
 
 ## Author
 
-Package **opt** was written by [Charles Iliya Krempeaux](http://changelog.ca)
+Package **opt** was written by [Charles Iliya Krempeaux](http://reiver.link)
