@@ -5,9 +5,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/reiver/go-json"
-
 	"github.com/reiver/go-erorr"
+	"github.com/reiver/go-json"
 )
 
 var _ json.Marshaler = Nothing[bool]()
@@ -15,7 +14,6 @@ var _ json.Marshaler = Nothing[string]()
 
 // MarshalJSON makes it so json.Marshaler is implemented.
 func (receiver Optional[T]) MarshalJSON() ([]byte, error) {
-
 	switch interface{}(receiver.value).(type) {
 	case json.Marshaler, encoding.TextMarshaler, bool, int, int8, int16, int32, int64, string, uint, uint8, uint16, uint32, uint64:
 		// these are OK.
