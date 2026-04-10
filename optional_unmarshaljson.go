@@ -3,7 +3,7 @@ package opt
 import (
 	"encoding/json"
 
-	"github.com/reiver/go-erorr"
+	"codeberg.org/reiver/go-erorr"
 )
 
 const errNilReceiver = erorr.Error("opt: nil receiver")

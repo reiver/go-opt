@@ -1,8 +1,14 @@
+codeberg.org/reiver/go-erorr v0.0.0-20260405052320-d275ec4447a2 h1:A4Wk6v0RMXTsbbBHvWqSZJx6vihXxOM0m5P2t2KDdFo=
+codeberg.org/reiver/go-erorr v0.0.0-20260405052320-d275ec4447a2/go.mod h1:3bNsCu9OeUw22YGlyFuo8yXvd0XeHp8xypsk1FyVU4k=
+codeberg.org/reiver/go-field v0.0.0-20260405051946-21d05de1f926 h1:MrrNkQIV2vJTkoNPrBi5RtFctSGLETox0eGkMS5pz7k=
+codeberg.org/reiver/go-field v0.0.0-20260405051946-21d05de1f926/go.mod h1:752EzuARz/8LnYzfPcxBFIIKstqok9fyTUmi5qnjn+Q=
+github.com/reiver/go-calltrace v0.0.0-20251216205616-3931a8c7b154 h1:3w3kacKCTHArAMZenoEO2qssZzJiQ9G8ZJgEvKerbuE=
+github.com/reiver/go-calltrace v0.0.0-20251216205616-3931a8c7b154/go.mod h1:b9j4dbN++ed+soAS/+wSCZ+OsZSm3CWiuzxps8nzkew=
 github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f h1:D1QSxKHm8U73XhjsW3SFLkT0zT5pKJi+1KGboMhY1Rk=
 github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f/go.mod h1:F0HbBf+Ak2ZlE8YkDW4Y+KxaUmT0KaaIJK6CXY3cJxE=
-github.com/reiver/go-json v0.0.0-20240808163155-5fb56b49f847 h1:Y8BYW4keqqtdEWECdG7Pg60U0awT3DioXiIfcXvWhMY=
-github.com/reiver/go-json v0.0.0-20240808163155-5fb56b49f847/go.mod h1:ns4kpzbK+OyMUZYT8UmBxrsYWNmvB/irZGmyIh99cxY=
 github.com/reiver/go-json v0.0.0-20240809035039-2f83bc2e8c10 h1:LbFL8s+beVbEfnCymQAbRVtG8ihlL67XKvqM17EqGK0=
 github.com/reiver/go-json v0.0.0-20240809035039-2f83bc2e8c10/go.mod h1:ns4kpzbK+OyMUZYT8UmBxrsYWNmvB/irZGmyIh99cxY=
 github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f h1:KBVWBoNIM8mHkUR3dP64hm2p2vxoD5xHZ6wUllCjFTc=
 github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f/go.mod h1:PFseSi8S0CBkc+YB6jYWtogPk83LumclnYJZZBQJJhs=
+golang.org/x/exp v0.0.0-20251125195548-87e1e737ad39 h1:DHNhtq3sNNzrvduZZIiFyXWOL9IWaDPHqTnLJp+rCBY=
+golang.org/x/exp v0.0.0-20251125195548-87e1e737ad39/go.mod h1:46edojNIoXTNOhySWIWdix628clX9ODXwPsQuG6hsK0=

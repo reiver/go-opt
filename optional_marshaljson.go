@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/reiver/go-erorr"
+	"codeberg.org/reiver/go-erorr"
 	"github.com/reiver/go-json"
 )
 
